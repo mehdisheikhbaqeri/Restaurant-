@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap");
+
+:root {
+  --red: #ad0e1e;
+}
+
+* {
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.5s ease-in-out;
+}
+
+*::selection {
+  background: var(--red);
+  color: #c5c5c5;
+}
+
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: #f0f0f0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 2rem 7%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+header .logo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #cfcfcf;
+}
+
+header .logo i {
+  padding-right: 1rem;
+  color: var(--red);
+}
+
+header .navbar a {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  font-weight: 900;
+  color: rgb(220, 206, 112);
+}
+
+header .navbar a:hover {
+  color: var(--red);
+}
+
+#menu-bar {
+  font-size: 3rem;
+  cursor: pointer;
+  color: #363636;
+  border: 0.1rem solid #666;
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.2rem;
+  display: none;
+}
+
+/* .bg-black {
+    background: #333 !important;
+  }
+  
+  .txt-white a {
+    color: #eee !important;
+  } */
+
+/* media queries */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  header {
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  #menu-bar {
+    display: initial;
+  }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #b7b7b7;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.3);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+}
+header .navbar.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+header .navbar a {
+  margin: 1.5rem;
+  padding: 1.5rem;
+  display: block;
+  border: 0.2rem solid rgba(0, 0, 0, 0.3);
+  border-left: 0.5rem solid var(--red);
+  background: #fff;
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+}
