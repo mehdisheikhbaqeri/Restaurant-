@@ -20,7 +20,7 @@
 }
 
 html {
-  font-size: 60%;
+  font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
@@ -31,7 +31,7 @@ body {
 }
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -47,7 +47,7 @@ header {
 header .logo {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #cfcfcf;
+  color: rgb(220, 206, 112);
 }
 
 header .logo i {
@@ -106,18 +106,19 @@ header .navbar a:hover {
     border-top: 0.1rem solid rgba(0, 0, 0, 0.3);
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  header .navbar a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    display: block;
+    border: 0.2rem solid rgba(0, 0, 0, 0.3);
+    border-left: 0.5rem solid var(--red);
+    background: #fff;
+  }
 }
-header .navbar.active {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-header .navbar a {
-  margin: 1.5rem;
-  padding: 1.5rem;
-  display: block;
-  border: 0.2rem solid rgba(0, 0, 0, 0.3);
-  border-left: 0.5rem solid var(--red);
-  background: #fff;
-}
+
 @media (max-width: 400px) {
   html {
     font-size: 50%;
