@@ -6,11 +6,13 @@ let header = document.querySelector("header");
 menu.onclick = () => {
   menu.classList.toggle("fa-times");
   navbar.classList.toggle("active");
+  menu.style.color = "#fff";
 };
 
 window.onscroll = () => {
   menu.classList.remove("fa-times");
   navbar.classList.remove("active");
+  menu.style.color = "#000";
 };
 
 // dark navbar scroll
@@ -30,7 +32,7 @@ document.addEventListener("scroll", function () {
 });
 
 //slider
-let sliderImage = document.querySelector("img");
+let sliderImage = document.querySelector(".Gallery");
 let prevBtn = document.querySelector(".prev");
 let nextBtn = document.querySelector(".next");
 let imgSrcArray = [
