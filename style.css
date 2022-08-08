@@ -43,7 +43,7 @@ section {
 .heading span {
   color: var(--red);
 }
-.btn {
+.button {
   display: inline-block;
   padding: 0.8rem 3rem;
   border: 0.3rem solid var(--red);
@@ -57,7 +57,7 @@ section {
   margin-top: 1rem;
 }
 
-.btn::before {
+.button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -69,12 +69,12 @@ section {
   z-index: -1;
 }
 
-.btn:hover::before {
+.button:hover::before {
   width: 100%;
   left: 0;
 }
 
-.btn:hover {
+.button:hover {
   color: rgb(220, 206, 112);
 }
 
@@ -408,6 +408,12 @@ header .navbar a:hover {
   font-size: 1.7rem;
   color: #ccc;
   padding: 1.5rem 0;
+}
+.footer {
+  font-size: 2rem;
+}
+.mehdi {
+  font-size: 3rem;
 }
 /* media queries */
 @media (max-width: 991px) {
