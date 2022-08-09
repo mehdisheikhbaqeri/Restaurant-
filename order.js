@@ -35,32 +35,34 @@ document.addEventListener("scroll", function () {
 let products = [
   {
     id: 1,
-    title: "Burger",
+    title: "Burger Economy",
     price: 8,
     img: "./Images/order/Burger Economy.jpg",
     count: 1,
   },
   {
     id: 2,
-    title: "Burger",
-    price: 8,
+    title: "Burger Spetioal",
+    price: 23,
     img: "./Images/order/Burger Vip.jfif",
     count: 1,
   },
   {
     id: 3,
-    title: "Burger",
-    price: 8,
+    title: "Burger Cheese",
+    price: 10,
     img: "./Images/order/Chees Burger.jpg",
     count: 1,
   },
-  {
-    id: 4,
-    title: "Burger",
-    price: 8,
-    img: "./Images/order/Dubl Burger.jfif",
-    count: 1,
-  },
+  {id: 4,title: "Dubl Burger",price: 16,img: "./Images/order/Dubl Burger.jfif",count: 1},
+  {id: 5,title: "Cake Black ",price: 32,img: "./Images/order/black Forest.jfif",count: 1},
+  {id: 6,title: "Cake Strawberry",price: 35.8,img: "./Images/order/strawberry.jpg",count: 1},
+  {id: 7,title: "Cake Blackberry",price: 33.5,img: "./Images/order/blackberry.jpg",count: 1},
+  {id: 8,title: "Cake Spetioal",price: 84,img: "./Images/order/the best.jpg",count: 1},
+  {id: 8,title: "Arabic Sweets",price: 11,img: "./Images/order/arabic sweet.jfif",count: 1},
+  {id: 8,title: "Chocolate",price: 3.5,img: "./Images/order/chocolate.jfif",count: 1},
+  {id: 8,title: "Indian Sweets",price: 17,img: "./Images/order/indian sweets.jpg",count: 1},
+  {id: 8,title: "Sweets's Dish",price: 45,img: "./Images/order/sweet dish.jfif",count: 1},
 ];
 
 let userBasket = [];
@@ -88,8 +90,8 @@ products.forEach(function (product) {
   productDetails.classList.add("shop-item-details");
 
   let productPrice = document.createElement("span");
-  productPrice.textContent = product.price;
-  productPrice.classList.add("shope-item-price");
+  productPrice.textContent = product.price + " $";
+  productPrice.classList.add("shop-item-price");
 
   let productButton = document.createElement("button");
   productButton.textContent = "Add To Cart";

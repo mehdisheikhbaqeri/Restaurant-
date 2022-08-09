@@ -34,6 +34,7 @@ section {
 }
 
 .heading {
+  margin-top: 5%;
   text-align: center;
   font-size: 3.5rem;
   padding: 1rem;
@@ -48,6 +49,7 @@ section {
   padding: 0.8rem 3rem;
   border: 0.3rem solid var(--red);
   color: var(--red);
+  background-color: transparent;
   cursor: pointer;
   font-size: 1.5rem;
   border-radius: 0.5rem;
@@ -136,16 +138,18 @@ header .navbar a:hover {
 }
 
 .button-primary {
-  color: white;
-  background-color: #c2c2c2;
-  border: none;
-  border-radius: 0.3em;
-  font-weight: bold;
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  border: 0.3rem solid var(--red);
+  color: var(--red);
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 1rem;
 }
-
-/* .button-primary:hover {
-  background-color: #2d9cdb;
-} */
 
 .tour-row {
   border-bottom: 1px solid black;
@@ -181,11 +185,12 @@ header .navbar a:hover {
 }
 
 .shop-item {
-  /* margin: 30px; */
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding-top: 7rem;
+  padding: 2rem;
+  background: rgb(224, 224, 224);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  text-align: center;
+  flex: 1 1 30rem;
 }
 
 .shop-item-title {
@@ -200,6 +205,7 @@ header .navbar a:hover {
 
 .shop-item-image {
   width: 15rem;
+  border-radius: 50%;
 }
 
 .shop-item-details {
@@ -210,6 +216,8 @@ header .navbar a:hover {
 }
 
 .shop-item-price {
+  font-size: 2rem;
+  margin: 1rem 2rem;
   flex-grow: 1;
   color: #333;
 }
@@ -217,7 +225,9 @@ header .navbar a:hover {
 .shop-items {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  text-align: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .cart-header {
@@ -326,6 +336,12 @@ header .navbar a:hover {
   background: #333 !important;
 }
 
+.footer {
+  font-size: 2rem;
+}
+.mehdi {
+  font-size: 3rem;
+}
 /* media query */
 @media (max-width: 991px) {
   html {
