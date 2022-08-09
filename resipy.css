@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap");
+
+:root {
+  --red: #ad0e1e;
+}
+
+* {
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.5s ease-in-out;
+}
+
+*::selection {
+  background: var(--red);
+  color: var(--red);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: #f0f0f0;
+}
+section {
+  padding: 2rem 7%;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3.5rem;
+  padding: 1rem;
+  color: #636363;
+}
+
+.heading span {
+  color: var(--red);
+}
+.btn {
+  font-size: 2rem;
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  border: 0.3rem solid var(--red);
+  color: var(--red);
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--red);
+  transition: 0.3s linear;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.btn:hover {
+  color: rgb(220, 206, 112);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 2rem 7%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+header .logo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgb(220, 206, 112);
+}
+
+header .logo i {
+  padding-right: 1rem;
+  color: var(--red);
+}
+
+header .navbar a {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  font-weight: 900;
+  color: rgb(220, 206, 112);
+}
+
+header .navbar a:hover {
+  color: var(--red);
+}
+
+#menu-bar {
+  font-size: 3rem;
+  cursor: pointer;
+  color: #363636;
+  border: 0.1rem solid #666;
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.2rem;
+  display: none;
+}
+
+p {
+  font-size: 1.2rem;
+}
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+/* main  */
+.container {
+  margin-top: 5%;
+  min-height: 100vh;
+}
+.meal-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  text-align: center;
+}
+.meal-search {
+  margin: 2rem 0;
+}
+.meal-search cite {
+  font-size: 1rem;
+}
+.meal-search-box {
+  margin: 1.2rem 0;
+  display: flex;
+  align-items: stretch;
+}
+.search-control,
+.search-btn {
+  width: 100%;
+}
+.search-control {
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border: 1px solid #e53935;
+}
+.search-btn {
+  width: 7rem;
+  height: 7rem;
+  font-size: 1.8rem;
+  color: #fff;
+  border: 0 solid rgb(220, 206, 112);
+  /* border-top-right-radius: 2rem;
+  border-bottom-right-radius: 4rem; */
+  transition: all 0.4s linear;
+}
+.meal-result {
+  margin-top: 4rem;
+}
+#meal {
+  margin: 2.4rem 0;
+}
+.meal-item {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 21px -12px #001;
+  margin: 2rem 0;
+}
+.meal-img img {
+  width: 100%;
+  display: block;
+}
+.meal-name {
+  padding: 1.5rem 0.5rem;
+}
+.meal-name h3 {
+  font-size: 1.4rem;
+}
+.recipe-btn {
+  text-decoration: none;
+  background-color: #c5c5c5;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.75rem 0;
+  display: block;
+  width: 175px;
+  margin: 1rem auto;
+  border-radius: 2rem;
+  transition: all 0.4s linear;
+}
+.recipe-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--red);
+  transition: 0.3s linear;
+  z-index: -1;
+}
+
+.recipe-btn:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.recipe-btn:hover {
+  background-color: var(--red);
+  color: rgb(220, 206, 112);
+}
+/* details */
+.meal-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e53935;
+  color: #fff;
+  border-radius: 1rem;
+  width: 90%;
+  height: 90%;
+  overflow-y: scroll;
+  display: none;
+  padding: 2rem 0;
+}
+.showRecipe {
+  display: block;
+}
+
+.meal-details-content {
+  margin-top: 35rem;
+  margin: 2rem;
+}
+.meal-details-content p:not(.recipe-category) {
+  padding: 1rem 0;
+}
+.recipe-close-btn {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  font-size: 1.8rem;
+  background: #fff;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+}
+.recipe-title {
+  letter-spacing: 1px;
+  padding-bottom: 1rem;
+}
+.recipe-category {
+  background: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #e53935;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 2rem;
+}
+.recipe-instruct {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+.recipe-meal-img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+.recipe-link {
+  margin: 1.4rem 0;
+}
+.recipe-link a {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: all 0.4s linear;
+}
+.recipe-link a:hover {
+  opacity: 0.8;
+}
+.notFound {
+  grid-template-columns: 1fr !important;
+  color: #a9a9a9;
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: 100%;
+}
+.recipe-close-btn {
+  margin-top: 5%;
+}
+/* dark mnue start*/
+.bg-black {
+  background: #333 !important;
+}
+.footer {
+  font-size: 2rem;
+}
+.mehdi {
+  font-size: 3rem;
+}
+/* media query */
+@media screen and (min-width: 600px) {
+  .meal-search-box {
+    width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #meal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .meal-item {
+    margin: 0;
+  }
+  .meal-details {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #meal {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
